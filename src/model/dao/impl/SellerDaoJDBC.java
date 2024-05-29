@@ -4,10 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+=======
+import java.util.List;
+>>>>>>> 06f615c7ae6402bf86c995c3b8b1296670f8ee07
 
 import db.DB;
 import db.DbException;
@@ -74,7 +78,11 @@ public class SellerDaoJDBC implements SellerDao {
 	private Seller instantiateSeller(ResultSet rs, Department dep) throws SQLException {
 		Seller obj = new Seller();
 
+<<<<<<< HEAD
 		obj.setId(rs.getInt("Id"));
+=======
+		obj.setId(rs.getInt("DepartmentId"));
+>>>>>>> 06f615c7ae6402bf86c995c3b8b1296670f8ee07
 		obj.setName(rs.getString("Name"));
 		obj.setEmail(rs.getString("Email"));
 		obj.setBaseSalary(rs.getDouble("BaseSalary"));
@@ -99,6 +107,7 @@ public class SellerDaoJDBC implements SellerDao {
 		return null;
 	}
 
+<<<<<<< HEAD
 	@Override
 	//Mudanças:
 	public List<Seller> findByDepartment(Department department) {
@@ -137,4 +146,6 @@ public class SellerDaoJDBC implements SellerDao {
 		}
 	}
 
+=======
+>>>>>>> 06f615c7ae6402bf86c995c3b8b1296670f8ee07
 }
