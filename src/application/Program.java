@@ -1,10 +1,9 @@
 package application;
 
-import java.util.Date;
+import java.util.List;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
-import model.entities.Department;
 import model.entities.Seller;
 
 public class Program {
@@ -37,14 +36,24 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = "+newSeller.getId());*/
 		
-		System.out.println("=====>/TESTANDO UPDATE/<=====");
+		/*System.out.println("=====>/TESTANDO UPDATE/<=====");
 		Department department = new Department(2, null);
 		Seller newSeller = new Seller(null, "Antônio", "antonio@gmail.com", new Date(), 3000.0, department);
 		
 		newSeller = sellerDao.findById(1);
 		newSeller.setName("Maria Gonzaga");
 		sellerDao.update(newSeller);
-		System.out.println("Update completed!");
+		System.out.println("Update completed!");*/
+		
+		System.out.println("=====>/TESTANDO DELETE/<=====");
+		int id = 15;
+		
+		sellerDao.deleById(id);
+		List<Seller> result = sellerDao.findAll();
+		
+		for(Seller sel : result) {
+			System.out.println(sel.toString());
+		}
 	}
 
 }
