@@ -30,12 +30,21 @@ public class Program {
 		 * System.out.println(obj.toString()); }
 		 */
 
-		System.out.println("=====>/TESTANDO INSERT/<=====");
+		/*System.out.println("=====>/TESTANDO INSERT/<=====");
 		Department department = new Department(2, null);
 		Seller newSeller = new Seller(null, "Antônio", "antonio@gmail.com", new Date(), 3000.0, department);
 
 		sellerDao.insert(newSeller);
-		System.out.println("Inserted! New id = "+newSeller.getId());
+		System.out.println("Inserted! New id = "+newSeller.getId());*/
+		
+		System.out.println("=====>/TESTANDO UPDATE/<=====");
+		Department department = new Department(2, null);
+		Seller newSeller = new Seller(null, "Antônio", "antonio@gmail.com", new Date(), 3000.0, department);
+		
+		newSeller = sellerDao.findById(1);
+		newSeller.setName("Maria Gonzaga");
+		sellerDao.update(newSeller);
+		System.out.println("Update completed!");
 	}
 
 }
