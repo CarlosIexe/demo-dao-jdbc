@@ -47,16 +47,16 @@ public class DB {
 			throw new DbException(e.getMessage());
 		}
 	}
-	
-	public static void closeStatement (Statement st) {
+
+	public static void closeStatement(Statement st) {
 		try {
 			st.close();
 		} catch (SQLException e) {
 			throw new DbException(e.getMessage());
 		}
 	}
-	
-	public static void closeResultSet (ResultSet rs) {
+
+	public static void closeResultSet(ResultSet rs) {
 		try {
 			rs.close();
 		} catch (SQLException e) {
